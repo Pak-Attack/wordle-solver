@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { validDictionary } from "./dictionarys.js";
+import { validDictionary, extendedDictionary } from "./dictionarys.js";
 import Inputs from "./Inputs.jsx";
 import Results from "./Results.jsx";
 import styled from "styled-components";
@@ -55,7 +55,7 @@ const App = (props) => {
     }
     valid.split("").forEach((letter) => {
       results = results.filter((word) => word.split("").includes(letter));
-      results2 = results.filter((word) => word.split("").includes(letter));
+      results2 = results2.filter((word) => word.split("").includes(letter));
     });
     invalid.split("").forEach((letter) => {
       results = results.filter((word) => !word.split("").includes(letter));
